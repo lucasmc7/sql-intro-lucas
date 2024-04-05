@@ -30,10 +30,10 @@ p.first_name,
 p.last_name
 
 from players p 
-left join stats s
+inner join stats s
     on p.id = s.player_id
 
-left join teams t
+inner join teams t
     on s.team_id  = t.id
 
 where t.name = "Chicago Cubs"

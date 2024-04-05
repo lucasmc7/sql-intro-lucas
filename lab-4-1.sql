@@ -7,7 +7,7 @@
 SELECT
 sum(hits)
 FROM players p
-left join stats s
+inner join stats s
     on p.id = s.player_id
 
 where p.first_name = "Barry"
