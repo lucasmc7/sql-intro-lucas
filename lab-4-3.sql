@@ -7,3 +7,18 @@
 -- +---------------+------------+-----------+-----------+
 
 
+select
+t.name,
+p.first_name,
+p.last_name,
+max(s.home_runs)
+
+from players p
+
+left join stats s
+    on p.id = s.player_id
+
+left join teams t 
+    on s.team_id = t.id
+
+where t.year = 2019;

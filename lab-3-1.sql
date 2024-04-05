@@ -14,4 +14,8 @@
 -- | 2020 | 30       |
 -- +------+----------+
 
-
+SELECT 
+ year,
+ count(distinct name)
+from  teams
+group by 1
